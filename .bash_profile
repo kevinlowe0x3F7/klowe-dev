@@ -1,4 +1,4 @@
-alias develop='git checkout develop && git pull origin develop'
+alias master='git checkout master && git pull origin master'
 alias gs='git status '
 alias gadd='git add '
 alias ga='git add .'
@@ -8,7 +8,6 @@ alias gco='git checkout '
 alias gbr='git branch'
 alias gd='git diff '
 alias gl='git log'
-alias cleanBranches="git branch --merged develop | egrep -v '^\s*\*?\s*develop$' | xargs git branch -d"
 
 alias dstop='docker stop $(docker ps -q)'
 alias drm='docker rm -f $(docker ps -a -q)'
