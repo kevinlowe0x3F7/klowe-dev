@@ -1,9 +1,27 @@
 "Environment
 set nocompatible
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'easymotion/vim-easymotion'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'justinmk/vim-sneak'
+Plugin 'tpope/vim-surround'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+"File type indent
+filetype plugin indent on    " required
 "Syntax highlighting
 syntax on
-"File type indent
-filetype plugin indent on
 "Color scheme
 syntax enable
 let g:solarized_bold=1
@@ -18,17 +36,15 @@ set wildmenu
 set backspace=indent,eol,start
 set esckeys
 set expandtab
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 set autoindent
 set copyindent
 set smarttab
-"Allow for cursor past one character
-set virtualedit=onemore
 "History
 set history=500
 "Line numbers
-set nu
+set nu rnu
 "Searching
 set incsearch
 set hlsearch
@@ -38,7 +54,7 @@ set smartcase
 set showmatch
 set mat=2
 "Misc format
-set shiftwidth=4
+set shiftwidth=2
 "Ignore file extensions during tab
 set wildignore=*.swp,*.bak,*.pyc,*.class
 "change terminal title
@@ -48,13 +64,11 @@ set noerrorbells
 set novisualbell
 "Set 0
 nnoremap 0 ^
-"Set semicolon to colon for command line
-nnoremap ; :
-"Fast save
-nnoremap <leader>w :w<CR>
-"Wrapped lines continue
-nnoremap j gj
-nnoremap k gk
+"Keep cursor in middle
+nnoremap <C-d> <C-d>zz 
+nnoremap <C-u> <C-u>zz 
+nnoremap n nzzzv
+nnoremap N Nzzzv
 "Fast terminal connections
 set ttyfast
 "Add g flag for search/replace by default
@@ -67,30 +81,13 @@ set showmode
 set ai "Auto indent
 set si "Smart indent
 "Leader
-let mapleader = ","
-"Search and backwards search
-nnoremap <space> /
-nnoremap <c-space> ?
+let mapleader = " "
 "Clear highlights after search
-nnoremap <silent> <leader><space> :nohlsearch<CR>
-"Set remap for buffer movement
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
-nnoremap <leader>b :ls<CR>:b<space>
-" Markdown
-au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.mdwn,*.md set ft=markdown
-au FileType markdown set cc=80
-au FileType markdown set textwidth=80
+nnoremap <silent> <leader><BS> :nohlsearch<CR>
+"Fast save
+nnoremap <leader>s :w<CR>
 "Turn off swap files
 set noswapfile
-"White space for specific file types
-autocmd Filetype ruby setlocal ts=4 sw=4 expandtab
-autocmd Filetype html setlocal ts=4 sw=4 expandtab
-autocmd Filetype css setlocal ts=4 sw=4 expandtab
-autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
-autocmd StdinReadPre * let s:std_in=1
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -100,11 +97,6 @@ autocmd BufReadPost *
 set viminfo^=%
 " Always show the status line
 set laststatus=2
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
+"easymotion
+let g:EasyMotion_keys = 'abcdefghijklmnoprstuvwxy'
+nmap <leader><leader>s <Plug>(easymotion-overwin-f2)
