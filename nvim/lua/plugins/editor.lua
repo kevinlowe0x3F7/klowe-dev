@@ -86,7 +86,6 @@ return {
     opts = {
       label = {
         uppercase = false,
-        exclude = "qz",
       },
     },
   },

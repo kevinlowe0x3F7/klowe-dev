@@ -4,7 +4,5 @@
 
 local keymap = vim.keymap
 
-keymap.set("n", "0", "^", { desc = "More intuitive 0, move to first nonblank character" })
-
 keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Center screen after half scroll down" })
 keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Center screen after half scroll up" })
