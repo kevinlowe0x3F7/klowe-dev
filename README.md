@@ -6,3 +6,5 @@ Dev config files for ease of transfer across different dev machines
 - Neovim
 - Tmux
 - CLI (https://www.youtube.com/watch?v=mmqDYw9C30I&t=4s)
+- Alfred
+- Rectangle
