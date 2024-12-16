@@ -1,0 +1,144 @@
+{
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "editor.fontFamily": "'RobotoMono-Regular', 'Courier New', monospace",
+  "editor.fontSize": 13,
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "vim.highlightedyank.enable": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "abcdefghijklmnopqrstuvwxyz",
+  "vim.sneak": true,
+  "vim.sneakReplacesF": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<Space>",
+  "vim.normalModeKeyBindings": [
+    // movement
+    {
+      "before": ["0"],
+      "after": ["^"]
+    },
+    {
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    // search
+    {
+      "before": ["s"],
+      "after": ["<leader>", "<leader>", "2", "s"]
+    },
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z", "z", "v"]
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z", "z", "v"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    // windows
+    {
+      "before": ["<leader>", "|"],
+      "commands": [":vsp"]
+    },
+    {
+      "before": ["<leader>", "-"],
+      "commands": [":split"]
+    },
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    {
+      "before": ["<leader>", "w", "w"],
+      "commands": ["workbench.action.closeEditorsInGroup"]
+    },
+    {
+      "before": ["<leader>", "w", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    // editing
+    {
+      "before": ["<leader>", "o"],
+      "after": ["o", "<Esc>", "k"]
+    },
+    {
+      "before": ["<leader>", "O"],
+      "after": ["O", "<Esc>", "j"]
+    },
+    // LSP
+    {
+      "before": ["g", "R"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["g", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["references-view.findReferences", "references-view.focus"]
+    },
+    {
+      "before": ["g", "O"],
+      "commands": ["workbench.action.gotoSymbol"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // better indent
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+  ],
+  "editor.lineNumbers": "relative",
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.enabled": false,
+}
