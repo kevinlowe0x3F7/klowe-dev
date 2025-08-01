@@ -1,8 +1,8 @@
 // Place your key bindings in this file to override the defaults
 [
-  { "key": "ctrl+left",  "command": "workbench.action.navigateBack" },
+  { "key": "ctrl+o",  "command": "workbench.action.navigateBack" },
   {
-    "key": "ctrl+right",
+    "key": "ctrl+i",
     "command": "workbench.action.navigateForward"
   },
   {
@@ -55,5 +55,68 @@
     "key": "ctrl+c",
     "command": "git.clean",
     "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+0",
+    "command": "-workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "cmd+1",
+    "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "cmd+4",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+3",
+    "command": "-workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+3",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "cmd+2",
+    "command": "-workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "cmd+5",
+    "command": "workbench.action.focusFourthEditorGroup"
+  },
+  {
+    "key": "cmd+4",
+    "command": "-workbench.action.focusFourthEditorGroup"
+  },
+  {
+    "key": "cmd+5",
+    "command": "-workbench.action.focusFifthEditorGroup"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
   },
 ]
