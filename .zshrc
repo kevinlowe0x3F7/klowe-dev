@@ -102,7 +102,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
+# Keybindings for vi in terminal
+set -o vi
+
 # ---- FZF -----
 
 # Set up fzf key bindings and fuzzy completion
@@ -156,7 +159,15 @@ alias cat="bat"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lsg="eza --color=always --long --git --git-ignore --no-filesize --icons=always --no-time --no-user --no-permissions"
 
+alias cd="z"
+
+alias lg="lazygit"
+
+alias main="git checkout main && git pull origin main"
+
+# Created by `pipx` on 2025-08-02 03:53:04
+export PATH="$PATH:/Users/kevinlowe/.local/bin"
+
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 
-alias cd="z"
