@@ -4,3 +4,7 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 keybind = cmd+r=prompt_surface_title
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+quick-terminal-position = bottom
+working-directory = inherit
+
