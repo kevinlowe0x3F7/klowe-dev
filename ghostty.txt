@@ -1,4 +1,4 @@
-font-family = Roboto Nerd Font
+font-family = RobotoMono Nerd Font Mono
 theme = Catppuccin Mocha
 cursor-style = block
 cursor-style-blink = false
